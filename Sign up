@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign up</title>
+    <link rel="icon" type="image/x-icon" href="./Aii1QSw03Uyoed8l.png" />
+    <style>
+      @font-face {
+  font-family: sahel;
+  src: url("./assets/Sahel-Black.eot") format("eot");
+  src: url("./assets/Sahel-Black.woff") format("woff");
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: sahel;
+  font-size: 18px;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #e3eefc;
+}
+a {
+  text-decoration: none;
+  color: #428ded;
+}
+form {
+  width: 460px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px 28px;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+input {
+  margin: 18px 0;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  border: 1px solid #ded9ee;
+  border-radius: 8px;
+  padding: 10px;
+  transition: 180ms ease-in border-color;
+}
+input:focus {
+  border-color: #89888b;
+}
+input::placeholder {
+  color: #9b9b9b;
+  font-size: 16px;
+}
+button[type="submit"],
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  background: #428ded;
+  color: #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  padding: 12px;
+}
+label {
+  text-align: center;
+}
+
+    </style>
+  </head>
+  <body>
+    <form action="/submit-form" method="post">
+      <div class="content">
+        <img src="./logo.svg" alt="">
+        <input
+          class="sm text-center"
+          name="display_name"
+          type="text"
+          placeholder="نام و نام خانوادگی"
+          autocomplete=""
+          required
+        />
+        <input
+          class="sm text-center"
+          name="email"
+          type="email"
+          placeholder="ایمیل"
+          autocomplete=""
+          required
+        />
+        <input
+          class="sm text-center"
+          name="mobile"
+          type="text"
+          placeholder="شماره موبایل"
+          autocomplete=""
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          minlength="8"
+          class="sm text-center"
+          autocomplete="new-password"
+          placeholder="رمز عبور"
+          required
+        />
+        <input
+          type="password"
+          name="password_confirmation"
+          minlength="8"
+          class="sm text-center"
+          autocomplete="new-password"
+          placeholder="تکرار رمز عبور"
+          required
+        />
+
+        
+      
+      <br />
+        <input type="checkbox" name="checkbox">
+      <a rel="noopener" href="https://www.sevenlearn.com/" target="_blank"><a class="text-primary" href="#">قوانین</a>
+      <span>سون لرن را مطالعه کرده&zwnj;ام و قبول دارم.</span></a><br />
+
+      <button type="submit">ثبت نام</button>
+    </form>
+  </div>
+  </body>
+</html>
