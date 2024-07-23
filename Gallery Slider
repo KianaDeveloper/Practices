@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+      #slider {
+        width: 100%;
+        height: a;
+        overflow: hidden;
+      }
+      .slide {
+        float: left;
+        width: 100%;
+      }
+      .slide img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="slider" class="slider-wrapper">
+      <div class="slide">
+        <img src="./1.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="./2.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="./3.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="./4.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="./5.jpg" alt="Slide 1" />
+      </div>
+      <div class="slide">
+        <img src="./6.jpg" alt="Slide 1" />
+      </div>
+    </div>
+
+    <script>
+      $(document).ready(function () {
+        var slideCount = $("#slider .slide").length;
+        var slideWidth = $("#slider .slide").width();
+        var totalWidth = slideCount * slideWidth;
+
+        $("#slider").css("width", totalWidth);
+
+        function moveSlides() {
+          $("#slider").animate(
+            {
+              marginLeft: -slideWidth,
+            },
+            1000,
+            function () {
+              $("#slider .slide:first").appendTo("#slider");
+              $("#slider").css("margin-left", 0);
+            }
+          );
+        }
+
+        setInterval(moveSlides, 3000);
+      });
+    </script>
+  </body>
+</html>
