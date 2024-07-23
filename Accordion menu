@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accordion Menu</title>
+    <style>
+      .accordion {
+        background-color: #f1f1f1;
+        color: #333;
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+      }
+
+      .active,
+      .accordion:hover {
+        background-color: #ccc;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+      .accordion {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>منو آکادئون</h2>
+
+    <div class="accordion">بخش اول</div>
+    <div class="panel">
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+        از طراحان گرافیک است.
+      </p>
+    </div>
+
+    <div class="accordion">بخش دوم</div>
+    <div class="panel">
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+        از طراحان گرافیک است.
+      </p>
+    </div>
+
+    <div class="accordion">بخش سوم</div>
+    <div class="panel">
+      <p>
+        لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده
+        از طراحان گرافیک است.
+      </p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".accordion").click(function () {
+          $(this).toggleClass("active");
+          $(this).next(".panel").slideToggle("slow");
+          $(".panel").not($(this).next(".panel")).slideUp("slow");
+          $(".accordion").not($(this)).removeClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
