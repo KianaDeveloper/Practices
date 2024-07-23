@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image map</title>
+    <style>
+      .img {
+        width: 600px;
+        height: 360px;
+        margin: auto;
+        margin-top: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <!DOCTYPE html>
+    <html>
+      <head>
+        <title>World Continent</title>
+      </head>
+      <body>
+        <img
+          class="img"
+          alt="Continents"
+          src="./world-continent-map-location-graphic-illustration_53876-6448 (1).avif"
+          usemap="#image-map"
+        />
+
+        <map name="image-map">
+          <area
+            rel="noopener"
+            target="_blank"
+            alt="World Continent"
+            href="https://en.wikipedia.org/wiki/Australia"
+            coords="453,284,508,252"
+            shape="rect"
+          />
+        </map>
+      </body>
+    </html>
+  </body>
+</html>
