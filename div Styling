@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div p {
+  background-color: yellow;
+}
+div > p {
+  color: red;
+}
+div + p {
+  color: purple;
+}
+div + p:first-child {
+  font-size: 24px;
+}
+a[target="_blank"] {
+  color: green;
+}
+span {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  margin: 50px;
+}
+span.box,
+span.box-1,
+span.box-2 {
+  border-color: green;
+}
+span.circle {
+  border-color: red;
+}
+span p {
+  margin-top: 30px;
+  text-align: center;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <p>Paragraph 1 in the div.</p>
+      <p>Paragraph 2 in the div.</p>
+      <section>
+        <p>Paragraph 3 in the div.</p>
+      </section>
+    </div class="container2">
+    <p>Paragraph 4. After a div.</p>
+    <p>Paragraph 5. Not in a div.</p>
+    <a href="#" target="_blank">Link with target="_blank"</a>
+    <br />
+    <a href="#" target="_self">Link with target="self"</a>
+    <br />
+    <span class="box"><p>Box</p></span>
+    <span class="box-1"><p>Box 1</p></span>
+    <span class="box-2"><p>Box 2</p></span>
+    <span class="circle"><p>Circle</p></span>
+  </body>
+</html>
