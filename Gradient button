@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gradient button</title>
+    <style>
+      button {
+        font-size: 22px;
+        display: block;
+        border: none;
+        outline: none;
+        width: 200px;
+        margin: auto;
+        margin-top: 130px;
+        color: #000;
+        text-align: center;
+        padding: 30px;
+        border-radius: 15px;
+        background-image: linear-gradient(
+          to right,
+          #bf2bdc 0%,
+          #2eeea8 51%,
+          #ef39bf 100%
+        );
+        background-size: 200% auto;
+        box-shadow: 0 0 20px #eee;
+        transition: 0.5s;
+      }
+      button:hover {
+        background-position: right center;
+        background-image: linear-gradient(
+          to right,
+          #ef39bf 0%,
+          #2eeea8 51%,
+          #bf2bdc 100%
+        );
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body></body>
+</html>
+<button>Hover!</button>
