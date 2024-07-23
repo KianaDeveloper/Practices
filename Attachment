@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>صفحه نمونه</title>
+    <style>
+      ul li a {
+  text-decoration: none;
+  color: black;
+}
+.image {
+  margin-top: 20px;
+}
+
+    </style>
+  <body>
+    <h1>سون لرن</h1>
+    <ul>
+      <li>
+        <a
+          class="link"
+          href="https://7learn.com/courses"
+          target="_blank"
+          rel="noopener"
+          >دوره‌های آموزشی</a
+        >
+      </li>
+      <li>
+        <a
+          class="link"
+          href="https://7learn.com/community"
+          target="_blank"
+          rel="noopener"
+          >جامعه‌ها</a
+        >
+      </li>
+      <li>
+        <a
+          class="link"
+          href="https://7learn.com/blog"
+          target="_blank"
+          rel="noopener"
+          >وبلاگ</a
+        >
+      </li>
+    </ul>
+
+    <img class="image" src="./OIG3.jpg" alt="تصویر رندوم" />
+  </body>
+</html>
