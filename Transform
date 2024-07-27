@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .my-div {
+        width: 100px;
+        height: 100px;
+        background-color: #3498db;
+        transform-origin: center;
+      }
+      .my-div {
+        transform: translate(50px, 200px);
+      }
+      .my-div {
+        transform: scale(2);
+      }
+      .my-div {
+        transform: rotate(45deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="my-div"></div>
+  </body>
+</html>
