@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menu</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      a {
+        text-decoration: none;
+      }
+      ul,
+      ol,
+      li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+      nav.nav {
+        background-color: #b1d3f7;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 12px;
+        position: relative;
+      }
+      .test li {
+        padding: 10px;
+        display: inline;
+      }
+
+      .test li a:hover {
+        color: rgb(255, 255, 255);
+        box-shadow: #000;
+      }
+      .sub-menu {
+        position: relative;
+      }
+      .sub-menu li {
+        display: block;
+      }
+      .sub-menu2 {
+        min-width: 200px;
+        white-space: nowrap;
+        top: 44px;
+        right: 13px;
+        position: absolute;
+        background-color: #ffffff;
+        display: none;
+        box-shadow: 0 0 4px 0px #ababab;
+      }
+      li.sub-menu:hover ul.sub-menu2 {
+        display: block;
+      }
+      .left {
+        background-color: #1d7be0;
+        padding: 9px;
+        position: absolute;
+        border-radius: 12px;
+        left: 0%;
+        top: 0%;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="nav">
+      <ul class="test">
+        <li>
+          <a class="#" href=""><i class="fa fa-home" aria-hidden="true"></i></a>
+        </li>
+        <li class="sub-menu">
+          <a class="#" href="">دوره های آموزشی</a>
+          <ul class="sub-menu2">
+            <li><a href="#">آموزش طراحی وب</a></li>
+            <li><a href="#">آموزش جاوااسکریپت</a></li>
+            <li><a href="#">آموزش پایتون</a></li>
+            <li><a href="#">آموزش فلاتر</a></li>
+          </ul>
+        </li>
+        <li><a class="#" href="">جامعه ها</a></li>
+        <li><a class="#" href="">شروع یادگیری برنامه نویسی</a></li>
+        <li><a class="# left" href="">ورود/عضویت</a></li>
+      </ul>
+    </nav>
+  </body>
+</html>
