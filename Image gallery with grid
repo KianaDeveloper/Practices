@@ -84,9 +84,7 @@
   </head>
   <body>
     <div class="container">
-      <h1 class="heading">
-        Image Gallery with CSS Grid 
-      </h1>
+      <h1 class="heading">Image Gallery with CSS Grid</h1>
 
       <div class="gallery">
         <div class="gallery-item">
@@ -109,6 +107,30 @@
           <img
             class="gallery-image"
             src="./pexels-ganajp-20826418.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-alexander-mass-748453803-25853905.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-ana-quirosa-555677148-22941112.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-mark-a-jenkins-373676419-20840625.jpg"
             alt=""
           />
         </div>
