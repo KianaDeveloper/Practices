@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery with grid</title>
+    <style>
+      @import url(https://fonts.googleapis.com/css?family=Montserrat:500);
+
+      :root {
+        /* Base font size */
+        font-size: 10px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      body {
+        min-height: 100vh;
+        background-color: #fafafa;
+      }
+
+      .container {
+        max-width: 100rem;
+        margin: 0 auto;
+        padding: 0 2rem 2rem;
+      }
+
+      .heading {
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 4rem;
+        font-weight: 500;
+        line-height: 1.5;
+        text-align: center;
+        padding: 3.5rem 0;
+        color: #1a1a1a;
+      }
+
+      .heading span {
+        display: block;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        margin: -1rem -1rem;
+      }
+
+      .gallery-item {
+        flex: 1 0 24rem;
+        margin: 1rem;
+        box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+        overflow: hidden;
+      }
+
+      .gallery-image {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 400ms ease-out;
+      }
+
+      .gallery-image:hover {
+        transform: scale(1.15);
+      }
+
+      @supports (display: grid) {
+        .gallery {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+          grid-gap: 2rem;
+        }
+
+        .gallery,
+        .gallery-item {
+          margin: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">
+        Image Gallery with CSS Grid 
+      </h1>
+
+      <div class="gallery">
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-ganajp-20826390.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-ganajp-20826401.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-ganajp-20826418.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-ganajp-20826418.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-mark-a-jenkins-373676419-20840625.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="gallery-item">
+          <img
+            class="gallery-image"
+            src="./pexels-aleksey-kuprikov-1883853-3493777.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
