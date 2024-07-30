@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Page Layout</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #fffacd; /* Light yellow background */
+      }
+      header {
+        background-color: #f5deb3; /* Wheat color */
+        padding: 20px;
+        text-align: center;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        padding: 10px;
+        background-color: #deb887; /* Burlywood color */
+      }
+      nav a {
+        text-decoration: none;
+        color: black;
+        margin-right: 15px;
+      }
+      .container {
+        display: grid;
+      }
+      .container > div {
+        padding: 25px;
+        font-size: 18px;
+        text-align: center;
+      }
+      .content {
+        grid-column: 1 / 4;
+        padding: 20px;
+        background-color: #ffdab9;
+      }
+      .aside {
+        grid-column: 4 / 6;
+        padding: 20px;
+        background-color: #bbcfc1;
+      }
+      footer {
+        text-align: center;
+        padding: 10px;
+        background-color: #f5deb3;
+      }
+
+      @media only screen and (min-width: 600px) {
+        .col-s-1 {
+          width: 8.33%;
+        }
+        .col-s-2 {
+          width: 16.66%;
+        }
+      }
+
+      @media only screen and (min-width: 768px) {
+        .col-1 {
+          width: 8.33%;
+        }
+        .col-2 {
+          width: 16.66%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>Header</header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Course</a>
+      <a href="#">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+      <div class="content">
+        <h1>JavaScript</h1>
+        <p>
+          JavaScript, often abbreviated as JS, is a programming language that is
+          one of the core technologies of the World Wide Web, alongside HTML and
+          CSS.
+        </p>
+      </div>
+      <div class="aside">
+        <h4>html</h4>
+        <h4>css</h4>
+        <h4>javascript</h4>
+      </div>
+    </div>
+    <footer>Footer</footer>
+  </body>
+</html>
