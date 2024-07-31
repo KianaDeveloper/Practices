@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fa">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Layout with mediaquery</title>
+    <style>
+      *,
+      body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        direction: rtl;
+      }
+      a {
+        text-decoration: none;
+      }
+      li,
+      ol,
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: block;
+      }
+      .mb-20 {
+        margin-bottom: 20px;
+      }
+      .mt-20 {
+        margin-top: 20px;
+      }
+      .p-0 {
+        padding: 0 !important;
+      }
+      .m-0 {
+        margin: 0;
+      }
+      .box-shadow {
+        box-shadow: 0px 0px 2px 0px #d0d0d0;
+      }
+      .container-fluid {
+        width: 100%;
+      }
+      .container {
+        clear: both;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      [class^="col-"] {
+        float: right;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      ul.menu li {
+        display: inline;
+        padding: 10px;
+        line-height: 70px;
+      }
+      .card {
+        border: 1px solid #efefef;
+        padding: 10px;
+        font-size: 16px;
+      }
+      .container-fluid li {
+        display: inline;
+        padding: 10px;
+      }
+      .size {
+        height: 250px;
+      }
+      .size1 {
+        height: 150px;
+      }
+      .size2 {
+        height: 250px;
+      }
+      .size3 {
+        height: 80px;
+      }
+      .image{
+        width: 80%;
+        height: 60px;
+        background-color: aqua;
+      }
+      .color{
+        background-color: blue;
+        color: aliceblue;
+      }
+      @media only screen and (max-width: 600px) {
+        .col-xs-1 {
+          width: 8.33%;
+        }
+        .col-xs-2 {
+          width: 16.66%;
+        }
+        .col-xs-3 {
+          width: 25%;
+        }
+        .col-xs-4 {
+          width: 33.33%;
+        }
+        .col-xs-5 {
+          width: 41.66%;
+        }
+        .col-xs-6 {
+          width: 50%;
+        }
+        .col-xs-7 {
+          width: 58.33%;
+        }
+        .col-xs-8 {
+          width: 66.66%;
+        }
+        .col-xs-9 {
+          width: 75%;
+        }
+        .col-xs-10 {
+          width: 83.33%;
+        }
+        .col-xs-11 {
+          width: 91.66%;
+        }
+        .col-xs-12 {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 600px) {
+        .col-s-1 {
+          width: 8.33%;
+        }
+        .col-s-2 {
+          width: 16.66%;
+        }
+        .col-s-3 {
+          width: 25%;
+        }
+        .col-s-4 {
+          width: 33.33%;
+        }
+        .col-s-5 {
+          width: 41.66%;
+        }
+        .col-s-6 {
+          width: 50%;
+        }
+        .col-s-7 {
+          width: 58.33%;
+        }
+        .col-s-8 {
+          width: 66.66%;
+        }
+        .col-s-9 {
+          width: 75%;
+        }
+        .col-s-10 {
+          width: 83.33%;
+        }
+        .col-s-11 {
+          width: 91.66%;
+        }
+        .col-s-12 {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 768px) {
+        .col-md-1 {
+          width: 8.33%;
+        }
+        .col-md-2 {
+          width: 16.66%;
+        }
+        .col-md-3 {
+          width: 25%;
+        }
+        .col-md-4 {
+          width: 33.33%;
+        }
+        .col-md-5 {
+          width: 41.66%;
+        }
+        .col-md-6 {
+          width: 50%;
+        }
+        .col-md-7 {
+          width: 58.33%;
+        }
+        .col-md-8 {
+          width: 66.66%;
+        }
+        .col-md-9 {
+          width: 75%;
+        }
+        .col-md-10 {
+          width: 83.33%;
+        }
+        .col-md-11 {
+          width: 91.66%;
+        }
+        .col-md-12 {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 992px) {
+        .col-l-1 {
+          width: 8.33%;
+        }
+        .col-l-2 {
+          width: 16.66%;
+        }
+        .col-l-3 {
+          width: 25%;
+        }
+        .col-l-4 {
+          width: 33.33%;
+        }
+        .col-l-5 {
+          width: 41.66%;
+        }
+        .col-l-6 {
+          width: 50%;
+        }
+        .col-l-7 {
+          width: 58.33%;
+        }
+        .col-l-8 {
+          width: 66.66%;
+        }
+        .col-l-9 {
+          width: 75%;
+        }
+        .col-l-10 {
+          width: 83.33%;
+        }
+        .col-l-11 {
+          width: 91.66%;
+        }
+        .col-l-12 {
+          width: 100%;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        .col-xl-offset-0 {
+          margin-right: 0;
+        }
+        .colxl-1 {
+          width: 8.33%;
+        }
+        .col-xl-2 {
+          width: 16.66%;
+        }
+        .col-xl-3 {
+          width: 25%;
+        }
+        .col-xl-4 {
+          width: 33.33%;
+        }
+        .col-xl-5 {
+          width: 41.66%;
+        }
+        .col-xl-6 {
+          width: 50%;
+        }
+        .col-xl-7 {
+          width: 58.33%;
+        }
+        .col-xl-8 {
+          width: 66.66%;
+        }
+        .col-xl-9 {
+          width: 75%;
+        }
+        .col-xl-10 {
+          width: 83.33%;
+        }
+        .col-xl-11 {
+          width: 91.66%;
+        }
+        .col-xl-12 {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <style></style>
+  <body>
+    <nav class="col-xs-12 col-s-12 col-md-12 col-l-12 col-xl-12">
+      <div class="card  box-shadow mb-20">
+        <div class="card-header">
+          <h1>وبسایت من</h1>
+          <p>اندازه مرورگر را تغییر دهید تا اثر را ببینید</p>
+        </div>
+        </div>
+      </div>
+    </nav>
+    <nav class="container-fluid">
+      <div class="col-xs-12 col-s-12 col-md-12 col-l-12 col-xl-12">
+       <div class="card color box-shadow mb-20">
+            <ul class="test">
+              <li><a class="#" href="">خانه</a></li>
+              <li><a class="#" href="">وبلاگ</a></li>
+              <li><a class="#" href="">درباره ما</a></li>
+            </ul>
+          </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <section class="container">
+      <div class="row">
+        <aside class="col-xs-12 col-s-12 col-md-8 col-l-8 col-xl-8">
+          <div class="card size box-shadow mb-20">
+            <div class="card-header">
+              <h5>عنوان</h5>
+              <p>توضیحات</p>
+            </div>
+            <div class="image">تصویر</div>
+            <p>متن آزمایشی...</p>
+            <p>لورم ایپسوم</p>
+            </div>
+            <div class="card size box-shadow mb-20">
+              <div class="card-header">
+                <h5>عنوان</h5>
+                <p>توضیحات</p>
+              </div>
+              <div class="image">تصویر</div>
+              <p>متن آزمایشی...</p>
+              <p>لورم ایپسوم</p>
+              </div>
+        </aside>
+        <div class="col-xs-12 col-s-12 col-md-4 col-l-4 col-xl-4 mb-20">
+          <div class="card size1 box-shadow">
+            <div class="card-body">
+              <div class="card-header">
+                <h5>درباره ما</h5>
+              </div>
+              <div class="image">تصویر</div>
+              <p>لورم ایپسوم</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-s-12 col-md-4 col-l-4 col-xl-4 mb-20">
+          <div class="card size2 box-shadow">
+            <div class="card-body">
+              <div class="card-header">
+                <h5>پست های محبوب</h5>
+              </div>
+              <div class="image">تصویر</div>
+              <div class="image">تصویر</div>
+              <div class="image">تصویر</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-12 col-s-12 col-md-4 col-l-4 col-xl-4 mb-20">
+          <div class="card size3 box-shadow">
+            <div class="card-body">
+              <div class="card-header">
+                <h5>تبلیغات</h5>
+              </div>
+              <p>متن آزمایشی...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="col-xs-12 col-s-12 col-md-12 col-l-12 col-xl-12">
+      <div class="card color box-shadow mb-20">
+        <div class="card-header">
+          <h5>فوتر</h5>
+        </div>
+        </div>
+    </footer>
+  </body>
+</html>
